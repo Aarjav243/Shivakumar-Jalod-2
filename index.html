@@ -139,51 +139,6 @@
       transition: transform var(--dur) var(--ease), opacity var(--dur);
     }
 
-    /* ORGANIC ANIMATIONS */
-    @keyframes waveMove {
-      0% { transform: translateX(0) translateZ(0) scaleY(1); }
-      50% { transform: translateX(-25%) translateZ(0) scaleY(0.8); }
-      100% { transform: translateX(-50%) translateZ(0) scaleY(1); }
-    }
-    @keyframes pulseHeight {
-      0%, 100% { height: 20%; opacity: 0.3; }
-      50% { height: 80%; opacity: 1; }
-    }
-    @keyframes glowPulse {
-      0%, 100% { opacity: 0.4; filter: blur(60px); }
-      50% { opacity: 0.8; filter: blur(40px); }
-    }
-
-    .wavy-line {
-      width: 100%; height: 60px; overflow: hidden; position: relative;
-      opacity: 0.4; pointer-events: none; margin-bottom: var(--s4);
-    }
-    .wavy-line svg {
-      width: 200%; height: 100%; position: absolute; left: 0; top: 0;
-      fill: none; stroke: var(--gold); stroke-width: 0.5;
-      animation: waveMove 15s linear infinite;
-    }
-
-    .pulse-viz {
-      display: flex; align-items: flex-end; gap: 4px; height: 32px; width: fit-content;
-      margin-bottom: var(--s4);
-    }
-    .pulse-viz span {
-      width: 3px; background: var(--gold); border-radius: 1px;
-      animation: pulseHeight 2s ease-in-out infinite;
-    }
-    .pulse-viz span:nth-child(2) { animation-delay: 0.2s; height: 40%; }
-    .pulse-viz span:nth-child(3) { animation-delay: 0.4s; height: 60%; }
-    .pulse-viz span:nth-child(4) { animation-delay: 0.1s; height: 30%; }
-    .pulse-viz span:nth-child(5) { animation-delay: 0.5s; height: 50%; }
-
-    .glow-bg {
-      position: absolute; width: 40vw; height: 40vw;
-      background: radial-gradient(circle, rgba(184,132,26,0.15) 0%, transparent 70%);
-      border-radius: 50%; z-index: -1; pointer-events: none;
-      animation: glowPulse 10s ease-in-out infinite;
-    }
-
     /* Accessibility: Focus Rings */
     :focus-visible {
       outline: 2px solid var(--gold);
@@ -215,28 +170,23 @@
       font-family: var(--font-mono); font-size: var(--text-xs);
       letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold);
       margin-bottom: var(--s3);
-      opacity: 0; animation: fadeUp 0.6s var(--ease) 0.18s forwards;
     }
     .hero__name {
       font-family: var(--font-serif); font-size: var(--hero-name);
       font-weight: 200; line-height: 1.0; letter-spacing: -0.03em;
       color: var(--parchment); margin-bottom: var(--s3);
-      opacity: 0; animation: fadeUp 0.6s var(--ease) 0.31s forwards;
     }
     .hero__name em { font-style: italic; font-weight: 300; color: var(--gold); }
     .hero__tagline {
       font-family: var(--font-serif); font-size: var(--text-2xl);
       font-weight: 300; color: var(--on-dark-dim); margin-bottom: var(--s4);
-      opacity: 0; animation: fadeUp 0.6s var(--ease) 0.44s forwards;
     }
     .hero__desc {
       font-size: var(--text-lg); color: var(--on-dark-dim); line-height: 1.75;
       margin-bottom: var(--s6);
-      opacity: 0; animation: fadeUp 0.6s var(--ease) 0.57s forwards;
     }
     .hero__actions {
       display: flex; gap: var(--s2); flex-wrap: wrap;
-      opacity: 0; animation: fadeUp 0.6s var(--ease) 0.70s forwards;
     }
     .btn {
       display: inline-flex; align-items: center; gap: 0.5rem;
@@ -251,13 +201,6 @@
     .btn--outline:hover { border-color: rgba(245,238,227,0.75); background: rgba(245,238,227,0.06); }
     .hero__viz {
       display: flex; justify-content: center; align-items: center;
-      opacity: 0; animation: fadeIn 0.8s var(--ease) 0.6s forwards;
-      position: relative;
-    }
-    .hero__viz::after {
-      content: ''; position: absolute; width: 100%; height: 100%;
-      background: radial-gradient(circle, rgba(184,132,26,0.08) 0%, transparent 80%);
-      animation: glowPulse 8s ease-in-out infinite;
     }
     .hero__viz svg { width: 100%; max-width: 480px; filter: drop-shadow(0 0 40px rgba(184,132,26,0.15)); }
     /* STATS */
@@ -514,11 +457,7 @@
     .footer__link:hover { color: var(--gold); }
     .footer__copy { font-size: var(--text-xs); color: var(--on-dark-dim); }
 
-    /* ANIMATIONS */
-    .fade-up { opacity: 0; transform: translateY(24px); transition: opacity 0.6s var(--ease), transform 0.6s var(--ease); }
-    .fade-up.visible { opacity: 1; transform: translateY(0); }
-    @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
 
     /* RESPONSIVE */
     @media (max-width: 1100px) {
@@ -679,8 +618,6 @@
 
     <!-- ═══════════════════════ ABOUT ═══════════════════════ -->
     <section class="about section-pad" id="about" aria-labelledby="about-heading">
-      <div class="glow-bg" style="top: 10%; right: -5%;"></div>
-      <div class="glow-bg" style="bottom: 10%; left: -5%; animation-delay: -5s;"></div>
       <div class="container">
         <div class="about__inner">
 
@@ -697,22 +634,13 @@
           </div>
 
           <!-- RIGHT: Content -->
+          <div class="about__content">
             <div class="section-label">About</div>
-
-            <div class="wavy-line fade-up">
-              <svg viewBox="0 0 1200 60" preserveAspectRatio="none">
-                <path d="M0,30 Q150,0 300,30 T600,30 T900,30 T1200,30 V60 H0 Z" />
-                <path d="M0,40 Q150,10 300,40 T600,40 T900,40 T1200,40" opacity="0.5" />
-              </svg>
-            </div>
 
             <blockquote class="about__quote fade-up" id="about-heading">
               I study how India is governed — by tracing its districts, schools, and the people who shaped them.
             </blockquote>
 
-            <div class="pulse-viz fade-up" aria-hidden="true" style="margin-top: var(--s6);">
-              <span></span><span></span><span></span><span></span><span></span>
-            </div>
             <p class="about__bio fade-up">
               My research sits at the intersection of computational science and public policy. Starting from a PhD in Physics, I now study India's administrative evolution, education governance, and public health — bringing quantitative rigour to historical and policy questions. I lead IndiaStateStory, tracing India's district boundaries from 1872 to the present.
             </p>
@@ -1401,11 +1329,7 @@
       });
     });
 
-    // SCROLL ANIMATIONS
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
-    }, { threshold: 0.1, rootMargin: '0px 0px -32px 0px' });
-    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
 
     // FOOTER YEAR
     document.getElementById('footerYear').textContent = new Date().getFullYear();
