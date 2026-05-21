@@ -129,85 +129,40 @@ document.addEventListener('DOMContentLoaded', () => {
   gsap.registerPlugin(ScrollTrigger, TextPlugin);
 
   // 0. HERO CINEMATIC SEQUENCE
-  const heroTL = gsap.timeline({
-    scrollTrigger: {
-      trigger: "#hero",
-      start: "top 20%",
-      toggleActions: "play reset play reset"
-    }
-  });
+  gsap.set('.hero__eyebrow',     { opacity: 0 });
+  gsap.set('.hero__name',        { filter: 'blur(10px)', scale: 0.96, opacity: 0 });
+  gsap.set('.hero__underline',   { scaleX: 0, opacity: 0 });
+  gsap.set('.hero__fields',      { opacity: 0, y: 25 });
+  gsap.set('.hero__desc',        { opacity: 0, y: 20 });
+  gsap.set('.hero__pillars',     { opacity: 0, y: 20 });
+  gsap.set('.hero__credentials', { opacity: 0 });
+  gsap.set('.hero__stats',       { opacity: 0, y: 20 });
+  gsap.set('.hero__stat-num',    { opacity: 0, y: 15 });
 
-  // Reset initial states just in case
-  gsap.set(".hero__name-first", { x: "-100vw", opacity: 0 });
-  gsap.set(".hero__name-last", { x: "100vw", opacity: 0 });
-  gsap.set(".hero__role-tag, .hero__role-sep", { y: -30, opacity: 0 });
-  gsap.set(".hero__desc, .hero__actions", { y: 20, opacity: 0 });
-
+  const heroTL = gsap.timeline({ delay: 1 });
   heroTL
-    // A. Names slide in to meet
-    .to(".hero__name-first", { x: 0, opacity: 1, duration: 1.2, ease: "power4.out" })
-    .to(".hero__name-last", { x: 0, opacity: 1, duration: 1.2, ease: "power4.out" }, "<")
-    
-    // B. Golden underline draws from center
-    .to(".hero__underline", { scaleX: 1, duration: 0.8, ease: "power2.inOut" }, "-=0.4")
-    
-    // C. Role tags drop in (like nodes)
-    .to(".hero__role-tag", { 
-      opacity: 1, 
-      y: 0, 
-      duration: 0.8, 
-      stagger: 0.2, 
-      ease: "back.out(1.7)" 
-    }, "-=0.2")
-    .to(".hero__role-sep", { opacity: 1, duration: 0.4, stagger: 0.2 }, "<")
-    
-    // D. Description and buttons fade up
-    .to(".hero__desc", { opacity: 1, y: 0, duration: 0.8, ease: "power2.out" }, "-=0.4")
-    .to(".hero__actions", { opacity: 1, y: 0, duration: 0.8, ease: "power2.out" }, "-=0.6");
+    .to('.hero__eyebrow',     { opacity: 1, duration: 1.2, ease: 'power2.out' }, 0)
+    .to('.hero__name',        { opacity: 1, filter: 'blur(0px)', scale: 1, duration: 1.6, ease: 'power2.out' }, 0.8)
+    .to('.hero__underline',   { opacity: 1, scaleX: 1, duration: 0.9, ease: 'power2.inOut' }, 2.2)
+    .to('.hero__fields',      { opacity: 1, y: 0, duration: 0.9, ease: 'power3.out', stagger: 0.25 }, 2.8)
+    .to('.hero__desc',        { opacity: 1, y: 0, duration: 0.9, ease: 'power2.out' }, 3.5)
+    .to('.hero__pillars',     { opacity: 1, y: 0, duration: 0.9, ease: 'power3.out' }, 4.1)
+    .to('.hero__credentials', { opacity: 1, duration: 0.7, ease: 'power2.out' }, 4.7)
+    .to('.hero__stats',       { opacity: 1, y: 0, duration: 0.8, ease: 'power2.out' }, 5.1)
+    .to('.hero__stat-num',    { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out', stagger: 0.15 }, 5.4);
 
-  // 1. SCHOLARLY HISTOGRAM (STATS SECTION)
-  const histogramCols = gsap.utils.toArray(".histogram__col");
-  
-  // Set initial states
-  gsap.set(".histogram__bar", { scaleY: 0 });
-  gsap.set(".histogram__value", { opacity: 0, scale: 0.5 });
-
-  const histogramTL = gsap.timeline({
-    scrollTrigger: {
-      trigger: ".histogram",
-      start: "top 85%",
-      toggleActions: "play reset play reset"
-    }
+  // Video parallax on scroll
+  gsap.to('.hero__bg video', {
+    yPercent: 12, ease: 'none',
+    scrollTrigger: { trigger: '#hero', start: 'top top', end: 'bottom top', scrub: true }
   });
 
-  // Axis lines fade in first
-  histogramTL.from(".histogram__axis", {
-    scaleX: 0,
-    duration: 0.6,
-    ease: "power2.out",
-    stagger: 0.1
+  // Hero content fades out on scroll
+  gsap.to('.hero__content', {
+    opacity: 0, y: -40, ease: 'none',
+    scrollTrigger: { trigger: '#hero', start: '55% top', end: 'bottom top', scrub: true }
   });
 
-  // Bars grow upward with stagger
-  histogramCols.forEach((col, i) => {
-    const bar = col.querySelector(".histogram__bar");
-    const value = col.querySelector(".histogram__value");
-
-    histogramTL.to(bar, {
-      scaleY: 1,
-      duration: 1.0,
-      ease: "power3.out",
-      onComplete: () => {
-        // Number stamps in when bar finishes
-        gsap.to(value, {
-          opacity: 1,
-          scale: 1,
-          duration: 0.4,
-          ease: "back.out(2)"
-        });
-      }
-    }, i * 0.15); // stagger each bar 0.15s apart
-  });
 
   // 2. PHYSICS DROP + TITLE GLOW
   // Scoped strictly to cards INSIDE .research__areas to avoid hiding foundation cards

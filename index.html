@@ -31,6 +31,7 @@
           <li><a href="#grants" class="nav__link">Grants</a></li>
           <li><a href="#publications" class="nav__link">Publications</a></li>
           <li><a href="#state-story" class="nav__link">India State Story</a></li>
+          <li><a href="#book" class="nav__link">Book</a></li>
           <li><a href="#media" class="nav__link">Media</a></li>
           <li><a href="#teaching" class="nav__link">Teaching</a></li>
           <li><a href="#background" class="nav__link">Background</a></li>
@@ -44,106 +45,92 @@
 
     <!-- ═══════════════════════ HERO ═══════════════════════ -->
     <section class="hero" id="hero" aria-labelledby="hero-name">
-      <svg class="hero__lattice" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
-        <defs>
-          <pattern id="lattice" x="0" y="0" width="60" height="60" patternUnits="userSpaceOnUse">
-            <path d="M30 0 L60 30 L30 60 L0 30 Z" fill="none" stroke="#B8841A" stroke-width="0.5"/>
-            <circle cx="30" cy="0" r="2" fill="#B8841A"/>
-            <circle cx="60" cy="30" r="2" fill="#B8841A"/>
-            <circle cx="30" cy="60" r="2" fill="#B8841A"/>
-            <circle cx="0" cy="30" r="2" fill="#B8841A"/>
-          </pattern>
-        </defs>
-        <rect width="100%" height="100%" fill="url(#lattice)"/>
-      </svg>
+
+      <!-- Video Background -->
+      <div class="hero__bg" aria-hidden="true">
+        <video autoplay muted playsinline>
+          <source src="Census_document_pages_turning_sl…_202605220108.mp4" type="video/mp4">
+        </video>
+      </div>
+      <!-- Dark Overlay -->
+      <div class="hero__overlay" aria-hidden="true"></div>
+      <!-- Watermark cover -->
+      <div class="hero__wm-cover" aria-hidden="true"></div>
 
       <div class="hero__inner hero__inner--centered">
         <div class="hero__content">
-          <h1 class="hero__name" id="hero-name">
-            <span class="hero__name-first">Shivakumar</span>
-            <span class="hero__name-last">Jolad</span>
-          </h1>
-          
+
+          <span class="hero__eyebrow">Associate Professor · FLAME University, Pune</span>
+
+          <h1 class="hero__name" id="hero-name">Dr. Shivakumar Jolad</h1>
+
           <div class="hero__underline"></div>
 
-          <div class="hero__roles">
-            <span class="hero__role-tag">Associate Professor</span>
-            <span class="hero__role-sep">·</span>
-            <span class="hero__role-tag">Policy Researcher</span>
-            <span class="hero__role-sep">·</span>
-            <span class="hero__role-tag">Education Historian</span>
+          <div class="hero__fields">
+            <span class="hero__field">Social Policies</span>
+            <span class="hero__field-sep">|</span>
+            <span class="hero__field">Education Research</span>
+            <span class="hero__field-sep">|</span>
+            <span class="hero__field">Demography</span>
+            <span class="hero__field-sep">|</span>
+            <span class="hero__field">Quantitative History</span>
+          </div>
+          <div class="hero__fields hero__fields--row2">
+            <span class="hero__field">Condensed Matter Physics</span>
+            <span class="hero__field-sep">|</span>
+            <span class="hero__field">Networks &amp; Complex Systems</span>
+            <span class="hero__field-sep">|</span>
+            <span class="hero__field">Statistical Mechanics</span>
           </div>
 
           <p class="hero__desc">
-            Bridging computational science and social inquiry, I trace India's administrative evolution, 
-            education systems, and public health from colonial roots to the present. My work combines 
-            data, history, and policy to enhance public understanding of governance and social impact.
+            Bridging physics, demography, and public policy — studying how India's schools, states, and societies have evolved from colonial roots to the present.
           </p>
-          <div class="hero__actions">
-            <a href="#research" class="btn btn--primary">View Research Areas</a>
-            <a href="#state-story" class="btn btn--outline">Explore India State Story</a>
-            <a href="#" class="btn btn--outline">Download Full CV (PDF)</a>
+
+          <div class="hero__pillars">
+            <div class="hero__pillar">
+              <span class="hero__pillar-num">01</span>
+              <span class="hero__pillar-text">Education Policy &amp; Governance</span>
+            </div>
+            <div class="hero__pillar">
+              <span class="hero__pillar-num">02</span>
+              <span class="hero__pillar-text">State Formation &amp; Administrative History</span>
+            </div>
+            <div class="hero__pillar">
+              <span class="hero__pillar-num">03</span>
+              <span class="hero__pillar-text">Demography &amp; Public Health</span>
+            </div>
           </div>
+
+          <p class="hero__credentials">
+            PhD Physics · Demography Minor — Pennsylvania State University &nbsp;·&nbsp; Previously at IIT Gandhinagar
+          </p>
+
+          <div class="hero__stats">
+            <div class="hero__stat">
+              <span class="hero__stat-num">30+</span>
+              <span class="hero__stat-label">Publications &amp; Reports</span>
+            </div>
+            <div class="hero__stat-divider" aria-hidden="true"></div>
+            <div class="hero__stat">
+              <span class="hero__stat-num">20+</span>
+              <span class="hero__stat-label">Years Research</span>
+            </div>
+            <div class="hero__stat-divider" aria-hidden="true"></div>
+            <div class="hero__stat">
+              <span class="hero__stat-num">25+</span>
+              <span class="hero__stat-label">Courses Taught</span>
+            </div>
+            <div class="hero__stat-divider" aria-hidden="true"></div>
+            <div class="hero__stat">
+              <span class="hero__stat-num">3</span>
+              <span class="hero__stat-label">Institutions</span>
+            </div>
+          </div>
+
         </div>
       </div>
 
-
-      </div>
-
-    </section>
-
-    <!-- ═══════════════════════ STATS ═══════════════════════ -->
-    <section class="stats" aria-label="Key metrics">
-      <div class="histogram" aria-label="Key academic metrics">
-
-        <!-- Faint grid lines -->
-        <div class="histogram__grid" aria-hidden="true">
-          <div class="histogram__gridline"></div>
-          <div class="histogram__gridline"></div>
-          <div class="histogram__gridline"></div>
-        </div>
-
-        <!-- Bar 1: Publications -->
-        <div class="histogram__col">
-          <div class="histogram__value">30+</div>
-          <div class="histogram__bar-wrap">
-            <div class="histogram__bar" style="--bar-height: 120px;"></div>
-          </div>
-          <div class="histogram__axis"></div>
-          <div class="histogram__label">Publications<br>&amp; Reports</div>
-        </div>
-
-        <!-- Bar 2: Years Research -->
-        <div class="histogram__col">
-          <div class="histogram__value">20+</div>
-          <div class="histogram__bar-wrap">
-            <div class="histogram__bar" style="--bar-height: 80px;"></div>
-          </div>
-          <div class="histogram__axis"></div>
-          <div class="histogram__label">Years<br>Research</div>
-        </div>
-
-        <!-- Bar 3: Courses Taught -->
-        <div class="histogram__col">
-          <div class="histogram__value">25+</div>
-          <div class="histogram__bar-wrap">
-            <div class="histogram__bar" style="--bar-height: 100px;"></div>
-          </div>
-          <div class="histogram__axis"></div>
-          <div class="histogram__label">Courses<br>Taught</div>
-        </div>
-
-        <!-- Bar 4: Institutions -->
-        <div class="histogram__col">
-          <div class="histogram__value">3</div>
-          <div class="histogram__bar-wrap">
-            <div class="histogram__bar" style="--bar-height: 30px;"></div>
-          </div>
-          <div class="histogram__axis"></div>
-          <div class="histogram__label">Institutions</div>
-        </div>
-
-      </div>
     </section>
 
     <!-- ═══════════════════════ ABOUT ═══════════════════════ -->
@@ -153,19 +140,38 @@
 
           <!-- LEFT: Professional Profile -->
           <div class="about__sidebar fade-up">
-            <div class="profile-card">
-              <div class="profile-card__item">
-                <span class="profile-card__label">Current Role</span>
-                <span class="profile-card__value">Associate Professor, Public Policy</span>
+            <div class="profile-cards">
+
+              <div class="profile-item">
+                <div class="profile-item__icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                </div>
+                <div class="profile-item__body">
+                  <span class="profile-item__label">Current Role</span>
+                  <span class="profile-item__value">Associate Professor, Public Policy</span>
+                </div>
               </div>
-              <div class="profile-card__item">
-                <span class="profile-card__label">Institution</span>
-                <span class="profile-card__value">FLAME University, Pune</span>
+
+              <div class="profile-item">
+                <div class="profile-item__icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 22V9l9-7 9 7v13"/><path d="M9 22V12h6v10"/><rect x="9" y="12" width="6" height="10"/></svg>
+                </div>
+                <div class="profile-item__body">
+                  <span class="profile-item__label">Institution</span>
+                  <span class="profile-item__value">FLAME University, Pune</span>
+                </div>
               </div>
-              <div class="profile-card__item">
-                <span class="profile-card__label">Leadership</span>
-                <span class="profile-card__value">Chair, Centre for Legislative Education &amp; Research</span>
+
+              <div class="profile-item">
+                <div class="profile-item__icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+                </div>
+                <div class="profile-item__body">
+                  <span class="profile-item__label">Leadership</span>
+                  <span class="profile-item__value">Chair, Centre for Legislative Education &amp; Research</span>
+                </div>
               </div>
+
             </div>
           </div>
 
@@ -226,24 +232,25 @@
         <div class="section-label">Research</div>
         <h2 class="research__heading fade-up" id="research-heading">Areas of Inquiry</h2>
         <p class="research__intro fade-up">
-          My work spans three interconnected fields: the political and administrative history of India, 
-          education policy and governance, and computational epidemiology. Each strand uses quantitative 
+          My work spans three interconnected fields: the political and administrative history of India,
+          education policy and governance, and computational epidemiology. Each strand uses quantitative
           and qualitative methods to address questions of governance, equity, and public welfare.
         </p>
 
         <div class="research__filters fade-up" role="group" aria-label="Filter by field">
           <button class="filter-btn active" data-field="all">All</button>
-          <button class="filter-btn" data-field="education">Education Policy</button>
-          <button class="filter-btn" data-field="history">Admin History</button>
-          <button class="filter-btn" data-field="health">Public Health</button>
-          <button class="filter-btn" data-field="networks">Network Science</button>
+          <button class="filter-btn" data-field="education">Education System and Policy</button>
+          <button class="filter-btn" data-field="history">Political and Administrative History</button>
+          <button class="filter-btn" data-field="health">Demography and Public Health</button>
+          <button class="filter-btn" data-field="networks">Networks and Complex System</button>
+          <button class="filter-btn" data-field="physics">Condensed Matter Physics</button>
         </div>
 
         <div class="research__areas">
           <!-- Card I: Education -->
           <div class="research-card fade-up" data-fields="education">
             <div class="research-card__num">I</div>
-            <div class="research-card__title">Education Policy &amp; Governance</div>
+            <div class="research-card__title">Education System and Policy</div>
             <ul class="research-card__list">
               <li>School Systems &amp; Reform</li>
               <li>Language in Education Policy</li>
@@ -251,27 +258,26 @@
             </ul>
           </div>
 
-          <!-- Card II: Public Policy -->
-          <div class="research-card fade-up" style="transition-delay:.1s" data-fields="policy health">
+          <!-- Card II: Political & Administrative History -->
+          <div class="research-card fade-up" style="transition-delay:.1s" data-fields="history">
             <div class="research-card__num">II</div>
-            <div class="research-card__title">Public Policy &amp; Administration</div>
+            <div class="research-card__title">Political and Administrative History</div>
             <ul class="research-card__list">
-              <li>Public Policy Analysis</li>
-              <li>Public Administration &amp; Governance</li>
-              <li>Governance of Public Health</li>
+              <li>Colonial &amp; Post-Colonial Governance</li>
+              <li>District Administration &amp; Boundaries</li>
+              <li>Federalism &amp; Decentralization</li>
             </ul>
           </div>
 
-          <!-- Card III: Evolution & Governance -->
-          <div class="research-card fade-up" style="transition-delay:.2s" data-fields="politics governance health migration">
+          <!-- Card III: Demography & Public Health -->
+          <div class="research-card fade-up" style="transition-delay:.2s" data-fields="health networks physics">
             <div class="research-card__num">III</div>
-            <div class="research-card__title">Evolution &amp; Population</div>
+            <div class="research-card__title">Demography and Public Health</div>
             <ul class="research-card__list">
-              <li>Political &amp; Administrative Evolution</li>
-              <li>Federalism &amp; Decentralization</li>
-              <li>Internal Migration &amp; Urban Governance</li>
               <li>Population Studies &amp; Maternal Health</li>
               <li>Computational Epidemiology</li>
+              <li>Networks &amp; Complex Systems</li>
+              <li>Condensed Matter Physics</li>
             </ul>
           </div>
         </div>
@@ -516,6 +522,11 @@
         <div class="section-label">Featured Project</div>
         <div class="practice__inner-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--s10); align-items: center; margin-bottom: var(--s8);">
           <div class="state-story-left">
+            <div style="margin-bottom: var(--s4);">
+              <a href="https://www.indiastatestory.in/" target="_blank" rel="noopener">
+                <img src="India State Stories_Final Logo_2.png" alt="India State Stories Logo" style="max-height: 100px; width: auto; display: block;">
+              </a>
+            </div>
             <h2 class="practice__heading" id="state-story-heading" style="font-size: var(--text-5xl); margin-bottom: var(--s4);">
               India State &amp; District Evolution
             </h2>
@@ -525,7 +536,8 @@
             <p class="practice__desc">
               Founder-Director of a one-of-its-kind project curated with research associate Mehr Kalra and team members Madhav Singh and others. It maps transitions in administrative boundaries from the Colonial period (start of Indian Census in 1872) to the present, combining time series analysis with India's complex political history.
             </p>
-            <div style="margin-top: var(--s6);">
+            <div style="margin-top: var(--s6); display: flex; gap: var(--s3); flex-wrap: wrap;">
+              <a href="https://www.indiastatestory.in/" target="_blank" rel="noopener" class="btn btn--outline">Visit Website ↗</a>
               <a href="https://doi.org/10.7910/DVN/D1AGUR" class="btn btn--primary">Access Dataset on Dataverse ↗</a>
             </div>
           </div>
@@ -550,6 +562,100 @@
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════ BOOK PUBLISHED ═══════════════════════ -->
+    <section class="section-pad" id="book" aria-labelledby="book-heading" style="background: var(--parchment); color: var(--ink); border-top: 1px solid var(--border);">
+      <div class="container">
+        <div class="section-label" style="color: var(--gold);">Publication</div>
+        <h2 class="fade-up" id="book-heading" style="font-family: var(--font-serif); font-size: var(--text-4xl); font-weight: 300; color: var(--ink); margin-bottom: var(--s8);">Book Published</h2>
+
+        <div class="fade-up" style="display: grid; grid-template-columns: 1fr 1.6fr; gap: var(--s10); align-items: start;">
+
+          <!-- Left: Book spine / cover placeholder -->
+          <div style="position: relative;">
+            <div style="
+              background: linear-gradient(145deg, #1a3a5c 0%, var(--ink) 100%);
+              border-radius: 4px 12px 12px 4px;
+              padding: var(--s8) var(--s6);
+              min-height: 340px;
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+              box-shadow: -6px 6px 24px rgba(0,0,0,0.25), 4px 0 0 #0a1824 inset;
+              border-left: 6px solid #0a1824;
+            ">
+              <!-- Top accent line -->
+              <div style="height: 2px; background: var(--gold); width: 40px; margin-bottom: var(--s4);"></div>
+
+              <div>
+                <div style="font-family: var(--font-serif); font-size: 1.5rem; font-weight: 400; color: var(--parchment); line-height: 1.3; margin-bottom: var(--s3);">
+                  Mapping the Republic
+                </div>
+                <div style="font-size: 0.8rem; color: var(--gold); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: var(--s6);">
+                  Visual Story of India's States &amp; Districts, 1950–2025
+                </div>
+                <div style="font-size: 0.78rem; color: rgba(245,238,227,0.55); letter-spacing: 0.05em;">
+                  Shivakumar Jolad
+                </div>
+              </div>
+
+              <div style="display: flex; align-items: center; gap: var(--s3);">
+                <div style="height: 1px; flex: 1; background: rgba(184,132,26,0.35);"></div>
+                <div style="font-size: 0.7rem; color: rgba(184,132,26,0.6); letter-spacing: 0.1em; text-transform: uppercase;">Astitva Prakashan</div>
+              </div>
+            </div>
+
+            <!-- Buy buttons under the book -->
+            <div style="display: flex; flex-direction: column; gap: var(--s2); margin-top: var(--s5);">
+              <a href="https://www.amazon.in/Mapping-Republic-Visual-Districts-1950-2025/dp/9370023925" target="_blank" rel="noopener"
+                style="display: flex; align-items: center; justify-content: center; gap: 0.5rem; padding: 0.65rem 1.25rem; background: #FF9900; color: #111; font-size: 0.85rem; font-weight: 600; border-radius: 6px; text-decoration: none; transition: opacity 0.2s;"
+                onmouseover="this.style.opacity='0.88'" onmouseout="this.style.opacity='1'">
+                Buy on Amazon ↗
+              </a>
+              <a href="https://astitvaprakashan.com/product/mapping-the-republic-visual-story-of-indias-states-and-districts-1950-2024-hardcover/" target="_blank" rel="noopener"
+                style="display: flex; align-items: center; justify-content: center; gap: 0.5rem; padding: 0.65rem 1.25rem; background: transparent; color: var(--ink); font-size: 0.85rem; font-weight: 500; border-radius: 6px; text-decoration: none; border: 1.5px solid var(--border); transition: border-color 0.2s;"
+                onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='var(--border)'">
+                Buy from Publisher ↗
+              </a>
+            </div>
+          </div>
+
+          <!-- Right: Book details -->
+          <div>
+            <h3 style="font-family: var(--font-serif); font-size: 1.75rem; font-weight: 400; color: var(--ink); line-height: 1.3; margin-bottom: var(--s2);">
+              Mapping the Republic: Visual Story of India's States and Districts, 1950–2025
+            </h3>
+            <div style="display: flex; gap: var(--s4); flex-wrap: wrap; margin-bottom: var(--s5); font-size: 0.85rem; color: #555;">
+              <span><strong style="color: var(--ink);">Publisher:</strong> Astitva Prakashan</span>
+              <span style="color: var(--border);">|</span>
+              <span><strong style="color: var(--ink);">Published:</strong> 20 March 2026</span>
+              <span style="color: var(--border);">|</span>
+              <span><strong style="color: var(--ink);">Format:</strong> Hardcover</span>
+            </div>
+
+            <p style="font-size: 1rem; color: #3a3a3a; line-height: 1.75; margin-bottom: var(--s5);">
+              This book is both a historical atlas and visual archive of how states and districts formed and evolved in modern India. It addresses the lack of comprehensive tracing of India's evolving political and administrative boundaries post-independence, providing a visual narrative of how India's states and districts came to be and how they changed over time.
+            </p>
+            <p style="font-size: 1rem; color: #3a3a3a; line-height: 1.75; margin-bottom: var(--s5);">
+              It chronicles the transformation of India's internal map — from British provinces and Princely states in 1947 to the states, Union territories and districts of today. Using decade-wise maps, timelines, alluvial charts and images, it traces the political and administrative boundary changes in each state from 1950 to 2025. The book draws from and acts as a companion piece to the <em>India State Story</em> project.
+            </p>
+
+            <div style="border-left: 3px solid var(--gold); padding-left: var(--s4); margin-bottom: var(--s6); color: #444; font-style: italic; font-size: 0.95rem; line-height: 1.7;">
+              Designed for students, teachers, researchers, public administrators, UPSC aspirants, and general readers seeking foundational context for India's federal and territorial structure.
+            </div>
+
+            <div style="display: flex; flex-wrap: wrap; gap: var(--s2);">
+              <span style="padding: 0.3rem 0.8rem; background: var(--gold-light); color: var(--gold); border-radius: 20px; font-size: 0.78rem; border: 1px solid rgba(184,132,26,0.2);">Historical Atlas</span>
+              <span style="padding: 0.3rem 0.8rem; background: var(--gold-light); color: var(--gold); border-radius: 20px; font-size: 0.78rem; border: 1px solid rgba(184,132,26,0.2);">Administrative History</span>
+              <span style="padding: 0.3rem 0.8rem; background: var(--gold-light); color: var(--gold); border-radius: 20px; font-size: 0.78rem; border: 1px solid rgba(184,132,26,0.2);">GIS &amp; Maps</span>
+              <span style="padding: 0.3rem 0.8rem; background: var(--gold-light); color: var(--gold); border-radius: 20px; font-size: 0.78rem; border: 1px solid rgba(184,132,26,0.2);">Political Geography</span>
+              <span style="padding: 0.3rem 0.8rem; background: var(--gold-light); color: var(--gold); border-radius: 20px; font-size: 0.78rem; border: 1px solid rgba(184,132,26,0.2);">Visual Archive</span>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
